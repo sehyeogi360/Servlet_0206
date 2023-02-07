@@ -22,8 +22,7 @@ public class Test10Controller extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
-			
-		
+					
 		out.println("<html><head><title>로그인</title></head><body>");		
 		// 전달 받은 아이디가 맵의 id와 일치하지 않는다면, 경고 문구 
 		if(!userMap.get("id").equals(id) && !userMap.get("password").equals(pwd)){ // 자바스크립트가 아니기에 무조건 equals 요거에대응 하는 키값을 넣어준다.
