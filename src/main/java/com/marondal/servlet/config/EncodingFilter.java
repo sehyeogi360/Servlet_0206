@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 @WebFilter("/*")//user로 시작하는 url만 filter를 거쳐간다 근데 user지우면 전부
-public class EncodingFilter  implements Filter {
+public class EncodingFilter implements Filter {
 	
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
