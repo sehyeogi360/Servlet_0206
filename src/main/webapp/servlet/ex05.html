@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력</title>
+</head>
+<body>
+<!-- 이름과 생년월일을 입력하는 input --><!-- get이아닌 post로 -->
+	<form method="post" action="/servlet/ex05"> <!-- 폼태그로 감싸주기. 두가지속성 메소드, action -->
+		<label>이름</label><input type="text" name = "name">
+		<label>생년월일</label><input type="text" name="birthday">
+		<button type="submit">입력</button><!-- 서브밋 감싸진 인풋태그의 사용자입력값을 액션이 주어진 것으로 전달 한다. -->
+	</form>
+	<!-- 오류가 뜸 글자깨진다. post로 넘어가면 리퀘스트 바디에 포함  요청하는쪽에서 지금 인코딩을 정확히 셋팅안했다는 뜻 -->
+</body>
+</html>
