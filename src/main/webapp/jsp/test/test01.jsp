@@ -33,7 +33,7 @@
 	<%--2. 채점 결과 --%>
 	
 	
-	
+	<%--
 	<%
 	List<String> scoreList = Arrays.asList(new String[]{"X", "O", "O", "O", "X", "O", "O", "O", "X", "O"});
 	
@@ -47,30 +47,39 @@
 		
 	
 	%>
-	
-	<h2> <%= sum %></h2>
+	--%>
+	<%-- <h2> <%= sum %></h2>  --%>
 	
 	<%--3. 1부터 n까지의 합계를 구하는 함수 --%>
 	<%!
-		Scanner scan = new Scanner(System.in);
-		
-		public int getSum() {
-		System.out.println("숫자를 입력하세요: ");	
-		int n = scan.nextInt();
+		public int getSum() {	
+		int n = 10;
 		int sum = 0;
-		for(int i = 1; i <= n; i++){			
+		for(int i = 1; i <= 10; i++){			
 			sum += i;
 		}		
 		return sum;
-	}
-	
-	
+	}	
 	%>
 	
-	<h2><%= getSum() %></h2>
+	<h2>1 에서  <%= getSum() %> 입니다.</h2>
 	
 	<%--4. 나이 구하기 --%>
 
+	<%!
+	
+		public int getAge(){
+			String birthDay = "20010820";
+			int year =Integer.parseInt(birthDay);
+			
+			int age = 2023 - year + 1;
+			
+			return age;
+		}
+	%>
+	
+	<h2> <%= "의 나이는" +  getAge() + "살"%></h2>
+	
 
 </body>
 </html>
