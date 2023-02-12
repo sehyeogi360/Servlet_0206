@@ -20,7 +20,7 @@
 		<form method="post" action = "/jsp/test/test07.jsp">
 			
 			<div class="d-flex">
-				<input type="text" class="form-control col-2" name="menu" value = "input1">
+				<input type="text" class="form-control col-2" name="menu">
 				<label><input type="checkbox" name="check">4점 이하 제외 </label>
 			</div>
 			
