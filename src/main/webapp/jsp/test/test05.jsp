@@ -18,7 +18,7 @@
 	
 	 <%
 	 	int number1 =  Integer.parseInt(request.getParameter("number1"));
-	 	String[] unitArray = request.getParameterValues("unit");
+	 	String[] unitArray = request.getParameterValues("unit");// Values여러개 전달받기
 	 	
 	 	
 	 	String result = "";// 반복문 밖에 만들기.

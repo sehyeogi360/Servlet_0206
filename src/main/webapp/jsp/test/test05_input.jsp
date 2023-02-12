@@ -18,7 +18,7 @@
 	
 		<form method="post" action="/jsp/test/test05.jsp">
 		<div class="d-flex">
-			<input type="text" class="form-control" name = "number1"><label>cm</label><%--value 값 없애기 --%>
+			<input type="text" class="form-control col-2" name = "number1"><label>cm</label><%--value 값 없애기 --%>
 		</div>	
 		<div>
 			<label>인치<input type="checkbox" name="unit" value="인치"></label>
