@@ -37,7 +37,7 @@
 			} else if(unit.equals("피트")){
 				double feet = numberBox1 * 0.032808;
 				result += feet+ "ft<br>";
-			} else if(unit.equals("미터")){
+			} else {
 				double meter = numberBox1 * 0.01;
 				result += meter +"m<br>"; // 세단위가 하나의 문자열로 완성됨.
 			}
