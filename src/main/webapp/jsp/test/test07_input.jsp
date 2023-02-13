@@ -19,9 +19,9 @@
 		<h1>메뉴검색</h1>
 		<form method="post" action = "/jsp/test/test07.jsp">
 			
-			<div class="d-flex">
-				<input type="text" class="form-control col-2" name="menu">
-				<label><input type="checkbox" name="check">4점 이하 제외 </label>
+			<div class="d-flex col-4 p-0"><%--길어질까봐 col-4 --%>
+				<input type="text" class="form-control col-4" name="menu"><%--체크됐다 안됐다는 정보 전달 하는 밸류 --%>
+				<label class="col-8"><input type="checkbox" name="check" value="pointLimit">4점 이하 제외 </label>
 			</div>
 			
 			<button type="submit" class="btn btn-success">검색</button>
