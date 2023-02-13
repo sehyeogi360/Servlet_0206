@@ -55,7 +55,7 @@
 				<%--입력창 내역대로 하면 엘스이프문 쭉 뒤로 늘어나게 됨.. 맵의 밸류값 바탕으로 출력 --%>
 				<% 		
 				for(Map<String, Object> store:list){ //향상된 for문 사용 인덱스 사용할일 없으니.	
-					if(store.get("menu").equals(menu) && check == null){// 치킨 피자 햄버거 경우의 수
+					if(store.get("menu").equals(menu) && check == null && store.get("point") > 4.0){// 치킨 피자 햄버거 경우의 수
 				%>
 					<tr>	<%--하나의 tr을 하나의 맵으로 처리 --%>
 						<td><%= store.get("name")%></td>
