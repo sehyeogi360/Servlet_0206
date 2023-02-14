@@ -37,12 +37,13 @@
 
 		<%
 		int day = 100;
-
-		for (int i = 0; i < 10; i++) {
 		
+		for (int i = 0; i < 10; i++) {
+			
 			// 변수 하나 만들고 그거를 거기서 100일 씩 추가 하는 방식??
 		%>
-		<div class="display-3 text-danger"><%= day%> 일 : <%=dateString %></div>	
+		<div class="display-3"><%= day%> 일 :</div>
+		<div class="display-3 text-danger"> <%=dateString %></div>	
 		
 		
 		<%
