@@ -19,36 +19,43 @@
 	<%-- Calendar 클래스를 사용해서 오늘을 기준으로 기념일이 몇일에 해당하는지 보여주는 페이지를 만드세요.
 100일, 200일, 300일... 1000일이 며칠인지 출력하세요.--%>
 
-	<%
-	Calendar today = Calendar.getInstance();
-	SimpleDateFormat formatter = new SimpleDateFormat("yyyy년 MM월 dd일");
-	// 100일후
-	//today.add(Calendar.DATE, 100);
-	//today.add(Calendar.DATE, 200);
-	//today.add(Calendar.DATE, 300);
-	//today.add(Calendar.DATE, 400);
-	String dateString = formatter.format(today.getTime());
 	
-	%>
 
 
 	<div class="container">
 		<h2>오늘부터 1일</h2>
-
 		<%
-		int day = 100;
+			Calendar today = Calendar.getInstance();//캘린더 객체 생성
+			
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy년 MM월 dd일");//원하는 형태의 데이터
+			
+			// 오늘은 1일로 하기위해서
+			today.add(Calendar.DATE, -1);
+			// 100일후
+			
+			//today.add(Calendar.DATE, 200);
+			//today.add(Calendar.DATE, 300);
+			//today.add(Calendar.DATE, 400);
+			today.add(Calendar.DATE, 100);//뭘 더할지, 얼마 더할지 그런담에 99지우고 100을쓰면 됨 
+			String dateString = formatter.format(today.getTime());//데이트 객체 뽑아내기
+	
 		
-		for (int i = 0; i < 10; i++) {
+		int day = 100; //차라리 데이라는 변수 주지 말고 <%= i * 100  하는것도 좋은방법.
+		
+		for (int i = 1; i <= 10; i++) {//처음부터 반복문 사용하지 말기
 			
 			// 변수 하나 만들고 그거를 거기서 100일 씩 추가 하는 방식??
-		%>
-		<div class="display-3"><%= day%> 일 :</div>
-		<div class="display-3 text-danger"> <%=dateString %></div>	
+		
+		
+		%><%--위에 꺽새도 그냥 하나 지우기. --%>
+		
+		<div class="display-3"><%= day%> 일 :<span class="text-danger"> <%=dateString %></span></div>	<%--이렇게 특정문자만 색 지정. --%>
 		
 		
 		<%
 		day += 100;
-		today.add(Calendar.DATE, 100);
+		today.add(Calendar.DATE, 100); //문자열로 다시 만들기 시작점만 하나 앞으로 땡기고 나머지는 그대로
+		dateString = formatter.format(today.getTime()); //여기에 한번 더하니 된다??
 		}
 		%>
 		
