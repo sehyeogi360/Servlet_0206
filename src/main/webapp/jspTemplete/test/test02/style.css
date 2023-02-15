@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#wrap{
+	width:1200px;	
+	
+	margin:auto;
+
+}
+
+header {
+
+	height:100px;
+}
+
+
+
+.main-menu {
+	
+	height:40px;
+}
+
+
+
+
+
+/*contens 높이 지워야 푸터 안먹힘*/
+footer {
+	height:70px;
+}

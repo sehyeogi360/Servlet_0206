@@ -71,12 +71,12 @@
 						<th>카테고리</th>
 					</tr>
 				</thead>
-				<tbody><%--향상된 for문 쓰기 --%>
+				<tbody><%--향상된 for문 쓰기 --%><%--카테고리별로 보여주는 페이지 만든다 생성--%>
 				<% for(Map<String, String> chanel:list) {
-					//String categoryId = chanel.get("category");
+					//파라미터러 받은 카테고리 							//카테고리 널이면 전체가 보여짐
 					if(chanel.get("category").equals(category) || category == null){
-						
-				
+						//카테고리를 꺼낸다. 지상파,영화,스포츠 등 비교대상이 되는거만 원하는거를 넣어주면 됨
+						//리퀘스트 파라미터 활용 한다. 원하는 결과만 보여지게 됨
 					
 					%>
 					<tr>
