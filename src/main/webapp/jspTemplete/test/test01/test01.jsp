@@ -73,17 +73,19 @@
 				</thead>
 				<tbody><%--향상된 for문 쓰기 --%>
 				<% for(Map<String, String> chanel:list) {
-					String cate = chanel.get("category");
-					if(cate.equals("category")){
+					//String categoryId = chanel.get("category");
+					if(chanel.get("category").equals(category) || category == null){
+						
+				
+					
 					%>
 					<tr>
 						<td><%=chanel.get("ch") %></td>
 						<td><%=chanel.get("name") %></td>
 						<td><%=chanel.get("category") %></td>						
 					</tr>
-						
-					
-					<% }
+						<% 
+						}
 					} %>
 					
 				</tbody>

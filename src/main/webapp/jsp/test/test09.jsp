@@ -40,7 +40,7 @@
 			String dateString = formatter.format(today.getTime());//데이트 객체 뽑아내기
 	
 		
-		int day = 100; //차라리 데이라는 변수 주지 말고 <%= i * 100  하는것도 좋은방법.
+		//int day = 100; //차라리 데이라는 변수 주지 말고 <%= i * 100  하는것도 좋은방법.
 		
 		for (int i = 1; i <= 10; i++) {//처음부터 반복문 사용하지 말기
 			
@@ -49,11 +49,11 @@
 		
 		%><%--위에 꺽새도 그냥 하나 지우기. --%>
 		
-		<div class="display-3"><%= day%> 일 :<span class="text-danger"> <%=dateString %></span></div>	<%--이렇게 특정문자만 색 지정. --%>
+		<div class="display-3"><%= i*100%> 일 :<span class="text-danger"> <%=dateString %></span></div>	<%--이렇게 특정문자만 색 지정. --%>
 		
 		
 		<%
-		day += 100;
+		//day += 100;
 		today.add(Calendar.DATE, 100); //문자열로 다시 만들기 시작점만 하나 앞으로 땡기고 나머지는 그대로
 		dateString = formatter.format(today.getTime()); //여기에 한번 더하니 된다??
 		}
