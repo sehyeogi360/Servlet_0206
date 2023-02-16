@@ -133,8 +133,8 @@
 				
 						%>
 						<tr>
-							<td><%=artist.get("id") %></td>
-							<td class="text-primary"><a href="/jspTemplete/test/test02/test02_detail.jsp?title=<%=artist.get("title")%>"><%=artist.get("title") %></a></td>
+							<td><%=artist.get("id") %></td> 								<%--파라미터로 전달 받아야함.  --%>
+							<td class="text-primary"><a href="/jspTemplete/test/test02/test02_detail.jsp?id=<%=artist.get("id")%>"><%=artist.get("title") %></a></td>
 							<td><%= artist.get("album") %></td>						
 						</tr>
 					<%} %>

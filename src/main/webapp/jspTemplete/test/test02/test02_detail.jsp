@@ -97,8 +97,14 @@
 	    musicList.add(musicInfo);
 	    
 	    String search = request.getParameter("search");
-		String title = request.getParameter("title");
-		String id = request.getParameter("id");
+		
+		String idString = request.getParameter("id"); // parseint null 뜸 항상 둘중에 하나가 널일경우 예외사항 처리해야함
+		
+		int musicId = 0;// 여기안에서만 쓸수 있으므로 이렇게 전역변수 해주기.
+		if(idString != null) {
+			 musicId = Integer.parseInt(idString);
+		}
+		String musicTitle = request.getParameter("title");
 	%>
 	
 	
@@ -106,22 +112,39 @@
 		<jsp:include page ="header.jsp"/>
 		<jsp:include page ="menu.jsp"/>
 		<section class="contents">
-		<h3>곡 정보</h3><%--id or title 둘중하나를 전달받아 출력 시키게 하기 --%>
-			<article class="contents1 d-flex border border-success p-3">
+		<%--id or title 둘중하나를 전달받아 출력 시키게 하기 --%><%--크게 두구역 곡정보/가사정보 --%>
+		<h3>곡 정보</h3>
+			<article class="contents1 d-flex border border-success p-3"><%--여기안에 div가 또들어가서 그거를 보더 넣기 --%>
+				
 				<% for(Map<String, Object> artist:musicList) { 
-					//Integer artistId = (Integer)artist.get("id");
-				if(artist.get("title").equals(search) || artist.get("id").equals(id)) {%>
-				<div>
-					<img width = 150px; src="<%=artist.get("thumbnail") %>" alt ="아이유">
+					//시간 분초로 계산 하기
+					
+				int id = (Integer)artist.get("id");// 이렇게 변수 안에 만들기 이거 안해서 그랬나봄 위에 형변환이랑
+				
+				//id가 전달되면, id가 일치하는 노래 보여주기
+				// 제목이 전달되면, 제목이 일치하는 노래 보여주기
+				
+				if((idString != null && musicId == id) || 
+				musicTitle != null && musicTitle.equals(artist.get("title"))) { // 둘중에 하나만 일치하면 출력 근데 이렇게 하면 둘다 500에러
+						//조건 명확하게 정리해야 함.
+					
+					
+					int time = (Integer)artist.get("time");//down casting
+					int minute = time / 60;
+					int second = time % 60;
+	
+					%> 
+				<div class="photo">
+					<img width = "200" src="<%=artist.get("thumbnail") %>" alt ="삐삐">
 				
 				</div>
-				<div class="ml-3">
-					<p class="display-4"><%=artist.get("title") %></p>
-					<p class="display-5 text-success"><%=artist.get("singer") %></p>
-					<p class="display-5">앨범 <%=artist.get("title") %></p>
-					<p class="display-5">재생 시간 <%=artist.get("time") %>초</p>
-					<p class="display-5">작곡가 <%=artist.get("composer") %></p>
-					<p class="display-5">작사가 <%=artist.get("lyricist") %></p>
+				<div class="small"><%--글자작게 --%>
+					<div class="display-4"><%=artist.get("title") %></div>
+					<div class="display-5 text-success"><%=artist.get("singer") %></div>
+					<div class="display-5">앨범 <%=artist.get("album") %></div><%--map 안의 title 키워드 --%>
+					<div class="display-5">재생 시간 <%=artist.get("time") %>초</div>
+					<div class="display-5">작곡가 <%=artist.get("composer") %></div>
+					<div class="display-5">작사가 <%=artist.get("lyricist") %></div>
 				</div>
 			</article>
 			
@@ -129,13 +152,12 @@
 				}
 				}
 			%>
-			<aside class="contents2 mt-4">
+			<aside class="contents2 mt-4"><%--상단여백 --%>
 				<h2>가사</h2><hr>
-				<table class="table text-center">
-					<thead>가사정보없음</thead>				
-					<tbody></tbody>
-				</table>
-				
+				<div>가사정보없음</div>
+						
+			
+				</aside>
 		</section>
 		<hr>
 		<jsp:include page ="footer.jsp"/>
