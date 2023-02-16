@@ -16,9 +16,7 @@
 </head>
 <body>
 	<%
-		String search = request.getParameter("search");
-		String title = request.getParameter("title");
-		String id = request.getParameter("id");
+		
 	// 아티스트 정보 
 
 	    Map<String, Object> artistInfo = new HashMap<>();
@@ -96,6 +94,10 @@
 	    musicInfo.put("composer", "아이유,이종훈,이채규");
 	    musicInfo.put("lyricist", "아이유");
 	    musicList.add(musicInfo);
+	    
+	    String search = request.getParameter("search");
+		String title = request.getParameter("title");
+		String id = request.getParameter("id");
 	%>
 	
 
@@ -132,7 +134,7 @@
 						%>
 						<tr>
 							<td><%=artist.get("id") %></td>
-							<td class="text-primary"><a href="/jspTemplete/test/test02/test02_detail.jsp?id=1"><%=artist.get("title") %></a></td>
+							<td class="text-primary"><a href="/jspTemplete/test/test02/test02_detail.jsp?title=<%=artist.get("title")%>"><%=artist.get("title") %></a></td>
 							<td><%= artist.get("album") %></td>						
 						</tr>
 					<%} %>

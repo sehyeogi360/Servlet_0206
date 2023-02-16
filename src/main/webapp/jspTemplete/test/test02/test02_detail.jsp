@@ -17,9 +17,7 @@
 <body>
 
 	<%
-	String search = request.getParameter("search");
-	String title = request.getParameter("title");
-	String id = request.getParameter("id");
+	
 	// 아티스트 정보 
 
 	    Map<String, Object> artistInfo = new HashMap<>();
@@ -97,6 +95,10 @@
 	    musicInfo.put("composer", "아이유,이종훈,이채규");
 	    musicInfo.put("lyricist", "아이유");
 	    musicList.add(musicInfo);
+	    
+	    String search = request.getParameter("search");
+		String title = request.getParameter("title");
+		String id = request.getParameter("id");
 	%>
 	
 	
@@ -107,7 +109,7 @@
 		<h3>곡 정보</h3><%--id or title 둘중하나를 전달받아 출력 시키게 하기 --%>
 			<article class="contents1 d-flex border border-success p-3">
 				<% for(Map<String, Object> artist:musicList) { 
-				
+					//Integer artistId = (Integer)artist.get("id");
 				if(artist.get("title").equals(search) || artist.get("id").equals(id)) {%>
 				<div>
 					<img width = 150px; src="<%=artist.get("thumbnail") %>" alt ="아이유">
