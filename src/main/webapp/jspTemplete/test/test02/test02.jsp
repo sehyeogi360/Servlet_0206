@@ -17,7 +17,8 @@
 <body>
 	<%
 		String search = request.getParameter("search");
-		
+		String title = request.getParameter("title");
+		String id = request.getParameter("id");
 	// 아티스트 정보 
 
 	    Map<String, Object> artistInfo = new HashMap<>();
@@ -131,7 +132,7 @@
 						%>
 						<tr>
 							<td><%=artist.get("id") %></td>
-							<td class="text-primary"><a class="" href=#><%=artist.get("title") %></a></td>
+							<td class="text-primary"><a href="/jspTemplete/test/test02/test02_detail.jsp?id=1"><%=artist.get("title") %></a></td>
 							<td><%= artist.get("album") %></td>						
 						</tr>
 					<%} %>

@@ -19,6 +19,7 @@
 	<%
 	String search = request.getParameter("search");
 	String title = request.getParameter("title");
+	String id = request.getParameter("id");
 	// 아티스트 정보 
 
 	    Map<String, Object> artistInfo = new HashMap<>();
@@ -107,7 +108,7 @@
 			<article class="contents1 d-flex border border-success p-3">
 				<% for(Map<String, Object> artist:musicList) { 
 				
-				if(artist.get("title").equals(search)) {%>
+				if(artist.get("title").equals(search) || artist.get("id").equals(id)) {%>
 				<div>
 					<img width = 150px; src="<%=artist.get("thumbnail") %>" alt ="아이유">
 				
