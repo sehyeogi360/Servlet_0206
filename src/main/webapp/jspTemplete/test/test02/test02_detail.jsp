@@ -96,7 +96,7 @@
 	    musicInfo.put("lyricist", "아이유");
 	    musicList.add(musicInfo);
 	    
-	    String search = request.getParameter("search");
+	    //String search = request.getParameter("search");
 		
 		String idString = request.getParameter("id"); // parseint null 뜸 항상 둘중에 하나가 널일경우 예외사항 처리해야함
 		
@@ -142,7 +142,7 @@
 					<div class="display-4"><%=artist.get("title") %></div>
 					<div class="display-5 text-success"><%=artist.get("singer") %></div>
 					<div class="display-5">앨범 <%=artist.get("album") %></div><%--map 안의 title 키워드 --%>
-					<div class="display-5">재생 시간 <%=artist.get("time") %>초</div>
+					<div class="display-5">재생 시간 <%=minute %> : <%=second %></div>
 					<div class="display-5">작곡가 <%=artist.get("composer") %></div>
 					<div class="display-5">작사가 <%=artist.get("lyricist") %></div>
 				</div>

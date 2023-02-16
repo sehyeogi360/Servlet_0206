@@ -95,9 +95,9 @@
 	    musicInfo.put("lyricist", "아이유");
 	    musicList.add(musicInfo);
 	    
-	    String search = request.getParameter("search");
-		String title = request.getParameter("title");
-		String id = request.getParameter("id");
+	 
+	   //String title = request.getParameter("title");
+	   //String id = request.getParameter("id");
 	%>
 	
 
