@@ -1,9 +1,13 @@
 package com.marondal.servlet.database;
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +29,9 @@ public class Test01Controller extends HttpServlet{
 		// 접속
 		mysqlService.connect();
 		// 쿼리수행
-		ResultSet resultSet = mysqlService.select("SELECT * FROM `real_estate`;");
+		ResultSet resultSet = mysqlService.select("SELECT `address`, `area`, `type`\r\n"
+				+ "FROM `real_estate`\r\n"
+				+ "ORDER BY `realtorId`  DESC;");
 		
 		
 		try {
@@ -33,8 +39,8 @@ public class Test01Controller extends HttpServlet{
 				
 				String address= resultSet.getString("address");
 				int area = resultSet.getInt("area");
-				
-				System.out.println("주소 : " + address + "면적 : " + area);
+				String type = resultSet.getString("type");
+				System.out.println("매물 주소 : " + address	 + "면적 : " + area + "타입 : " + type);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -43,14 +49,47 @@ public class Test01Controller extends HttpServlet{
 		
 		//insert 문 
 		
-		String insert = "INSERT INTO `real_estate`\r\n"
-				+ "(`realtorId`, `address`, `area`, `type`, `price`, `rentPrice`, `createdAt`,`updatedAt`)\r\n"
-				+ "VALUE\r\n"
-				+ "(3, '헤라펠리스 101동 5305호', 350, '매매', 1500000, NULL, now(), now());";
+//		String insert = "INSERT INTO `real_estate`\r\n"
+//				+ "(`realtorId`, `address`, `area`, `type`, `price`, `rentPrice`, `createdAt`,`updatedAt`)\r\n"
+//				+ "VALUE\r\n"
+//				+ "(3, '헤라펠리스 101동 5305호', 350, '매매', 1500000, NULL, now(), now());";
+//		
+//		mysqlService.disconnect();
 		
 		
+		// 데이터베이스 접속
+			
+//		try {
+//			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+//			
+//			String url = "jdbc:mysql://localhost:3306/dulumary_0119";
+//			String userId = "root";
+//			String password = "root";
+//		
+//		
+//			// 접속
+//			Connection connection = DriverManager.getConnection(url ,userId, password);
+//			Statement statement = connection.createStatement();
+//			//쿼리 수행
+//		
+//			String selectQuery = "SELECT `address`, `area`, `type`\r\n"
+//					+ "FROM `real_estate`\r\n"
+//					+ "ORDER BY `realtorId`  DESC;";
+//			ResultSet resultSet = statement.executeQuery(selectQuery);
+//			
+//			
+//			while(resultSet.next()) {
+//				String address= resultSet.getString("address"); 
+//				int area = resultSet.getInt("area");
+//				out.println("매물 주소 : " + address + "면적 : " +  area);
+//			}
+//		
+//		
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
-		mysqlService.disconnect();
 		
 		
 		
