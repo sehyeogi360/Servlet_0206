@@ -36,7 +36,7 @@ public class MysqlService {
 	public void connect() {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-			Connection connection = DriverManager.getConnection(url, userId, password);
+			connection = DriverManager.getConnection(url, userId, password);// Connection을 지워야 멤버변수로써 사용 가능
 			statement = connection.createStatement();//java.sql 임포트 앞에 클래스명도 빼주기
 			//메소드 호출하면 이복잡한 과정이 한번에 해결
 		} catch (SQLException e) {
