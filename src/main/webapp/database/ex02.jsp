@@ -39,5 +39,8 @@
 			
 		</tbody>
 	</table>	
+	
+	<a href="/database/ex02_input.jsp">입력</a>
+	
 </body>
 </html>
