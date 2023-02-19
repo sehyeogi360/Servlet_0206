@@ -27,11 +27,8 @@ public class Test02InsertController extends HttpServlet{
 		String query = "INSERT INTO `site`\r\n"
 				+ "(`name`, `url`, `createdAt`, `updatedAt`)\r\n"
 				+ "VALUE\r\n"
-				+ "('마론달', 'http://marondal.com', now(), now()),\r\n"
-				+ "('구글', 'https://google.com', now(), now()),\r\n"
-				+ "('네이버', 'https://naver.com', now(), now()),\r\n"
-				+ "('다음', 'https://daum.net', now(), now()\r\n"
-				+ ");";
+				+ "('"+ name + "', '" + url + "', now(), now());";
+		
 		
 		int count = mysqlService.update(query);
 		
