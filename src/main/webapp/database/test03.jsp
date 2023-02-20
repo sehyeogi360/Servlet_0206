@@ -16,21 +16,54 @@
 <body>
 	<div id="wrap" class="bg-secondary">
 	
-		<header class="bg-primary">
-			<div class="logo bg-warning">
-				<h2 class="text-center text">홍당무</h2>
+		<header class="bg-warning">
+			<div class="logo">
+				<h2 class="text-center text-white">HONG당무 마켓</h2>
 			</div>
 			<nav class="main-menu nav-fill bg-info">
 				<ul class="nav">
-					<li class="nav-item"><a href="#">리스트</a></li>
-					<li class="nav-item"><a href="#">물건 올리기</a></li>
-					<li class="nav-item"><a href="#">마이페이지</a></li>
+					<li class="nav-item"><a href="#" class="text-white">리스트</a></li>
+					<li class="nav-item"><a href="#" class="text-white">물건 올리기</a></li>
+					<li class="nav-item"><a href="#" class="text-white">마이페이지</a></li>
 				</ul>
 			</nav>
 		</header>
-		<section class="contents bg-success">
-			<div class="contents2">
-				<div></div>
+		<section class="contents bg-success d-flex flex-wrap justify-content-center">
+			<div class="box border border-warning p-3">
+				<img width ="300"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<div> 팝니다 맥북  프로 팔아요</div>
+				<div>180000원</div>
+				<div>최준</div>
+			</div>
+			<div class="box border border-warning p-3">
+				<img width ="300"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<div> 팝니다 맥북  프로 팔아요</div>
+				<div>180000원</div>
+				<div>최준</div>
+			</div>
+			<div class="box border border-warning p-3">
+				<img width ="300"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<div> 팝니다 맥북  프로 팔아요</div>
+				<div>180000원</div>
+				<div>최준</div>
+			</div>
+			<div class="box border border-warning p-3">
+				<img width ="300"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<div> 팝니다 맥북  프로 팔아요</div>
+				<div>180000원</div>
+				<div>최준</div>
+			</div>
+			<div class="box border border-warning p-3">
+				<img width ="300"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<div> 팝니다 맥북  프로 팔아요</div>
+				<div>180000원</div>
+				<div>최준</div>
+			</div>
+			<div class="box border border-warning p-3">
+				<img width ="300"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<div> 팝니다 맥북  프로 팔아요</div>
+				<div>180000원</div>
+				<div>최준</div>
 			</div>
 		</section>
 		

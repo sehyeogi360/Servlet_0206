@@ -26,7 +26,7 @@ public class Test02DeleteController extends HttpServlet{
 		
 		mysqlService.disconnect();
 		
-		response.sendRedirect("/databse/test02.jsp");
+		response.sendRedirect("/database/test02.jsp");
 		
 		
 	}
