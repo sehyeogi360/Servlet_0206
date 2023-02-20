@@ -25,6 +25,15 @@
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy년 MM월 dd일");
 	
 		String dateString = formatter.format(today.getTime());
+	
+		//윤년 계산
+		int[] lastDay= {31,28,31,30,31,30,31,31,30,31,30,31};
+		if((year%4==0 && year%100!=0)||(year%400==0)){
+			lastDay[1]=29;
+		} else {
+			lastDay[1]=28;
+		}
+	
 	%>
 	<div class="container">
 	<h1 class="text-center"><%=year %> - <%=month + 1 %></h1>
@@ -41,6 +50,13 @@
 				</tr>
 			</thead>
 			<tbody>
+			
+			<%for(int i = 0; i < 5; i++){
+				for(int j = 0; j < 7; j++){
+				
+					
+					//getDate()메소드는 1월부터 12월까지 해당 월이 며칠까지 있는지를 리턴해주는 코드입니다.
+				}}%>
 				<tr>
 					<td class="text-danger">1</td>
 					<td>1</td>
@@ -50,42 +66,9 @@
 					<td>1</td>
 					<td>1</td>
 				</tr>
-				<tr>
-					<td class="text-danger">1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-				</tr>
-				<tr>
-					<td class="text-danger">1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-				</tr>
-				<tr>
-					<td class="text-danger">1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-				</tr>
-				<tr>
-					<td class="text-danger">1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-				</tr>
+			
+				
+				
 			</tbody>
 		</table>
 	</div>
