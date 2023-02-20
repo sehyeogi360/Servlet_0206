@@ -11,13 +11,14 @@ import com.marondal.servlet.common.MysqlService;
 
 @WebServlet("/database/test02/insert")
 public class Test02InsertController extends HttpServlet{
-
 	
 	@Override
-	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {//전달받은 값 사이트 주소 와 값 이므로.. Post로 해보기 값이 클수 있다.
 		
-		String name =  request.getParameter("name");
-		String url =  request.getParameter("url");
+		// 이름과 주소를 전달 받고 favorite 테이블에 insert 한다.
+		
+		String name = request.getParameter("name");
+		String url = request.getParameter("url");
 		
 		
 		
@@ -27,13 +28,13 @@ public class Test02InsertController extends HttpServlet{
 		String query = "INSERT INTO `site`\r\n"
 				+ "(`name`, `url`, `createdAt`, `updatedAt`)\r\n"
 				+ "VALUE\r\n"
-				+ "('"+ name + "', '" + url + "', now(), now());";
+				+ "('"+ name + "', '" + url + "', now(), now());";// 아까 있던 쿼리 그대로 복붙 후 파라미터로 교체
 		
 		
-		int count = mysqlService.update(query);
+		int count = mysqlService.update(query);// 업데이트 쿼리
 		
 		mysqlService.disconnect();
 		
-		response.sendRedirect("/database/test02.jsp");
+		response.sendRedirect("/database/test02.jsp");//리스폰스 객체로부터 센드리다이렉트 메소드 소환 주소까지 정확히써주기
 	}
 }
