@@ -21,30 +21,29 @@
 	
 	
 	<h1>물건 올리기</h1>
-	<form>
-	<section class="contents">
+	<form method="get" action="/database/test03.jsp">
+	<section class="contents mt-3">
 	<div clas="d-flex">
-	<select class="col-3">
-		<option>-아이디 선택-</option>
-		<option>마로비</option>
-		<option>아메리카노</option>
-		<option>최준</option>
-		<option>빠다</option>
-		<option>빠구루</option>
-		<option>다팔아</option>
-	</select>
+		<select class="col-3">
+			<option>-아이디 선택-</option>
+			<option>마로비</option>
+			<option>아메리카노</option>
+			<option>최준</option>
+			<option>빠다</option>
+			<option>빠구루</option>
+			<option>다팔아</option>
+		</select>
 
-	<input type="text" class=" col-3 form" name = "name">
-	
-	<input type="text" class="col-3">
+		<input type="text" class="col-2" value = "제목">
+		
+		<input type="text" class="col-2" value = "가격">
 	</div>
 	
-	<textarea>
-	
+	<textarea rows="5" cols="150" class="mt-3">
 	
 	</textarea>
 	
-	<button class="submit" class="btn-secondary col-10">저장</button>
+	<button class="submit" class="btn-secondary">저장</button>
 	
 	
 	</section>

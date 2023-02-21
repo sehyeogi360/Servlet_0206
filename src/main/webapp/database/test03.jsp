@@ -33,25 +33,25 @@
 			</div>
 			<div class="box border border-warning p-3 m-2">
 				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
-				<div> 팝니다 맥북  프로 팔아요</div>
+				<div> 바퀴벌레좀 잡아주세요.</div>
 				<div>180000원</div>
 				<div>최준</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
 				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
-				<div> 팝니다 맥북  프로 팔아요</div>
+				<div> 후라다 여성지갑 팝니다</div>
 				<div>180000원</div>
 				<div>최준</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
 				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
-				<div> 팝니다 맥북  프로 팔아요</div>
+				<div> 원피스 팝니다</div>
 				<div>180000원</div>
 				<div>최준</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
 				<img width ="350"src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_960_720.jpg" alt="items">
-				<div> 플스4 팔아요</div>
+				<div> 플스4 팝니다</div>
 				<div>180000원</div>
 				<div>최준</div>
 			</div>
