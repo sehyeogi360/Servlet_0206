@@ -11,9 +11,48 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="/jspTemplete/test/test01/style.css" type="text/css">
+		<link rel="stylesheet" href="/database/style.css" type="text/css">
 </head>
 <body>
+	<div id="wrap">
+	
+	<jsp:include page ="header.jsp"/>
+	
+	
+	
+	<h1>물건 올리기</h1>
+	<form>
+	<section class="contents">
+	<div clas="d-flex">
+	<select class="col-3">
+		<option>-아이디 선택-</option>
+		<option>마로비</option>
+		<option>아메리카노</option>
+		<option>최준</option>
+		<option>빠다</option>
+		<option>빠구루</option>
+		<option>다팔아</option>
+	</select>
+
+	<input type="text" class=" col-3 form" name = "name">
+	
+	<input type="text" class="col-3">
+	</div>
+	
+	<textarea>
+	
+	
+	</textarea>
+	
+	<button class="submit" class="btn-secondary col-10">저장</button>
+	
+	
+	</section>
+	</form>
+	
+	
+	<jsp:include page ="footer.jsp"/>
+	</div>
 
 </body>
 </html>

@@ -3,29 +3,22 @@
 #wrap{
 	width:1200px;
 	
-	height:800px;
+	
 	margin:auto;
 }
 
 .header{
-	height:100px;
+	height:150px;
 	
 }
 .header>.logo{
-	height: 50px;
+	height: 75px;
 }
 
 .header>.main-menu{
-	height:50px;
+	height:75px;
 }
 
-.contents{
-	
-	height:500px;
-	
-	
-	
-}
 
 
 
