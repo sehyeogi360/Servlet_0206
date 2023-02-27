@@ -23,28 +23,40 @@
 	<h1>물건 올리기</h1>
 	<form method="get" action="/database/test03.jsp">
 	<section class="contents mt-3">
-	<div clas="d-flex">
-		<select class="col-3">
-			<option>-아이디 선택-</option>
-			<option>마로비</option>
-			<option>아메리카노</option>
-			<option>최준</option>
-			<option>빠다</option>
-			<option>빠구루</option>
-			<option>다팔아</option>
-		</select>
-
-		<input type="text" class="col-2" value = "제목">
+		<div class="d-flex">
+			<select class="col-2">
+				<option>-아이디 선택-</option>
+				<option>마로비</option>
+				<option>아메리카노</option>
+				<option>최준</option>
+				<option>빠다</option>
+				<option>빠구루</option>
+				<option>다팔아</option>
+			</select>
+	
+			<input type="text" class="col-3  ml-3" value = "" placeholder="제목">
+			
+			<div class="input-group mb-3 ml-3">
+			  <input type="text" class="" placeholder="가격" aria-label="Recipient's username" aria-describedby="basic-addon2">
+			  <div class="input-group-append">
+			    <span class="input-group-text" id="basic-addon2">원</span>
+			  </div>
+			</div>
+			
+		</div>
+	
+		<textarea rows="5" cols="160" class="mt-3">
 		
-		<input type="text" class="col-2" value = "가격">
-	</div>
-	
-	<textarea rows="5" cols="150" class="mt-3">
-	
-	</textarea>
-	
-	<button class="submit" class="btn-secondary">저장</button>
-	
+		</textarea>
+		
+		<div class="input-group input-group-sm mt-3 mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="inputGroup-sizing-sm">이미지url</span>
+		  </div>
+		  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+		</div>
+
+		<button type="submit" class="btn btn-secondary btn-lg btn-block">저장	</button>
 	
 	</section>
 	</form>
