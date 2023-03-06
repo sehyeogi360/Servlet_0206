@@ -58,7 +58,7 @@
 		  <input type="text" id ="priceInput" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
 		</div>
 
-		<button type="submit" class="btn btn-secondary btn-lg btn-block">저장	</button>
+		<button id="saveButton" type="submit" class="btn btn-secondary btn-lg btn-block">저장	</button>
 	
 	</section>
 	</form>
@@ -68,19 +68,37 @@
 	</div>
 	<script>
 	$(document).ready(function() {
-	//입력 상황	
-		if(sellerInput == null){
-			alert("판매자를 선택하세요.");
-			return ;
-		} else if (titleInput == null){
-			alert("제목을 쓰세요.");
-			return ;
-		} else if(priceInput== null ){
-			alert("가격을입력하세요.");
-			return ;
+		
+		
+		$("#saveButton").on("click", function() {
 			
-		}
-	}
+			let seller = $("#sellerInput").val();
+			let title = $("#titleInput").val();
+			let price = $("#priceInput").val();
+			
+			//입력 상황	
+			if(seller == ""){
+				alert("판매자를 선택하세요.");
+				return ;
+			} 
+			
+			if (title == ""){
+				alert("제목을 쓰세요.");
+				return ;
+			} 
+			
+			if(price == ""){
+				alert("가격을입력하세요.");
+				return ;
+				
+			}
+			
+			alert("저장되었습니다.");
+			
+		});
+			
+	
+	});
 		
 	</script>
 </body>

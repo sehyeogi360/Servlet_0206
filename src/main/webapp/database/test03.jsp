@@ -26,34 +26,34 @@
 				<div>최준</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
-				<img width ="350"src="https://cdn.pixabay.com/photo/2014/02/17/14/28/vacuum-cleaner-268179_960_720.jpg" alt="items">
+				<img width ="350"src="https://cdn.pixabay.com/photo/2014/02/17/14/28/vacuum-cleaner-268179_960_720.jpg" alt="이미지">
 				<div> 진공 청소기 팝니다!</div>
-				<div>180000원</div>
-				<div>최준</div>
+				<div>350000원</div>
+				<div>하구루</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
-				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<img width ="350"src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_960_720.png" alt="이미지">
 				<div> 바퀴벌레좀 잡아주세요.</div>
 				<div>180000원</div>
 				<div>최준</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
-				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<img width ="350"src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_960_720.png" alt="이미지">
 				<div> 후라다 여성지갑 팝니다</div>
-				<div>180000원</div>
+				<div>200000원</div>
 				<div>최준</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
-				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="items">
+				<img width ="350"src="https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_960_720.jpg" alt="이미지">
 				<div> 원피스 팝니다</div>
-				<div>180000원</div>
-				<div>최준</div>
+				<div>200000원</div>
+				<div>마로비</div>
 			</div>
 			<div class="box border border-warning p-3 m-2">
-				<img width ="350"src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_960_720.jpg" alt="items">
+				<img width ="350"src="https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_960_720.jpg" alt="이미지">
 				<div> 플스4 팝니다</div>
-				<div>180000원</div>
-				<div>최준</div>
+				<div>100000원</div>
+				<div>마로비</div>
 			</div>
 		</section>
 		

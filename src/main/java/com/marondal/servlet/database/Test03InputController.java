@@ -28,9 +28,9 @@ public class Test03InputController extends HttpServlet {
 		mysqlService.connect();
 		
 		String query = "INSERT INTO `used_goods`\r\n"
-				+ "(`id`, `sellerId`, `nickname`, `title`, `description`, `picture`, createdAt, updatedAt)\r\n"
+				+ "(`sellerId`, `nickname`, `title`, `description`, `picture`, createdAt, updatedAt)\r\n"
 				+ "VALUE\r\n"
-				+ "('" + id + "', '" + sellerId +"', '" + nickname +"', '" + title + "', '" + description + "', '" + picture + "', now(), now());";
+				+ "('" + sellerId +"', '" + nickname +"', '" + title + "', '" + description + "', '" + picture + "', now(), now());";
 		
 		int count = mysqlService.update(query);// 업데이트 쿼리
 		

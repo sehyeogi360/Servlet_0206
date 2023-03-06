@@ -1,6 +1,7 @@
 package com.marondal.servlet.database;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +16,10 @@ public class Test03OutputController extends HttpServlet{
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-	
+		
+		response.setContentType("text/html");		
+		
+		PrintWriter out = response.getWriter();
 	
 	int id = Integer.parseInt(request.getParameter("id"));
 	
@@ -24,7 +28,7 @@ public class Test03OutputController extends HttpServlet{
 
 
 	String query = "SELECT * \r\n"
-			+ "FROM `used_goods`\r\n"
+			+ "FROM `seller`\r\n"
 			+ "ORDER BY `id` DESC;";
 	
 	int count = mysqlService.update(query);
