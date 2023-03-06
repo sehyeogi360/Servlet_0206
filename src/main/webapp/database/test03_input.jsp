@@ -12,6 +12,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="/database/style.css" type="text/css">
+		
+		
 </head>
 <body>
 	<div id="wrap">
@@ -24,7 +26,7 @@
 	<form method="get" action="/database/test03.jsp">
 	<section class="contents mt-3">
 		<div class="d-flex">
-			<select class="col-2">
+			<select id ="sellerInput" class="col-2">
 				<option>-아이디 선택-</option>
 				<option>마로비</option>
 				<option>아메리카노</option>
@@ -34,10 +36,10 @@
 				<option>다팔아</option>
 			</select>
 	
-			<input type="text" class="col-3  ml-3" value = "" placeholder="제목">
+			<input type="text" id ="titleInput" class="col-3  ml-3" value = "" placeholder="제목">
 			
 			<div class="input-group mb-3 ml-3">
-			  <input type="text" class="" placeholder="가격" aria-label="Recipient's username" aria-describedby="basic-addon2">
+			  <input type="text" id ="priceInput" class="" placeholder="가격" aria-label="Recipient's username" aria-describedby="basic-addon2">
 			  <div class="input-group-append">
 			    <span class="input-group-text" id="basic-addon2">원</span>
 			  </div>
@@ -53,7 +55,7 @@
 		  <div class="input-group-prepend">
 		    <span class="input-group-text" id="inputGroup-sizing-sm">이미지url</span>
 		  </div>
-		  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+		  <input type="text" id ="priceInput" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
 		</div>
 
 		<button type="submit" class="btn btn-secondary btn-lg btn-block">저장	</button>
@@ -64,6 +66,22 @@
 	
 	<jsp:include page ="footer.jsp"/>
 	</div>
-
+	<script>
+	$(document).ready(function() {
+	//입력 상황	
+		if(sellerInput == null){
+			alert("판매자를 선택하세요.");
+			return ;
+		} else if (titleInput == null){
+			alert("제목을 쓰세요.");
+			return ;
+		} else if(priceInput== null ){
+			alert("가격을입력하세요.");
+			return ;
+			
+		}
+	}
+		
+	</script>
 </body>
 </html>
