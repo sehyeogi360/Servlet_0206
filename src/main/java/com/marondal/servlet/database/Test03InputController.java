@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.marondal.servlet.common.MysqlService;
 
-@WebServlet("/database/test03/")
+@WebServlet("/database/test03/input")
 public class Test03InputController extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		int id = Integer.parseInt(request.getParameter("id"));
+		//int id = Integer.parseInt(request.getParameter("id"));
 		String sellerId =request.getParameter("sellerId");			
 		String title = request.getParameter("title");
 		int price = Integer.parseInt(request.getParameter("price"));

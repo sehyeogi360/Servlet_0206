@@ -23,10 +23,10 @@
 	
 	
 	<h1>물건 올리기</h1>
-	<form method="get" action="/database/test03.jsp">
+	<form method="get" action="/database/test03/input">
 	<section class="contents mt-3">
-		<div class="d-flex">
-			<select id ="sellerInput" class=" form-control col-2">
+		<div class="d-flex"><!-- 판매자명은 seller테이블에 있다는점 -->
+			<select id ="sellerInput" class=" form-control col-2" name="seller">
 				<option>-아이디 선택-</option>
 				<option>마로비</option>
 				<option>아메리카노</option>
@@ -36,10 +36,10 @@
 				<option>다팔아</option>
 			</select>
 	
-			<input type="text" id ="titleInput" class="form-control col-3  ml-3" value = "" placeholder="제목">
+			<input type="text" id ="titleInput" class="form-control col-3  ml-3" value = "" placeholder="제목" name="title">
 			
 			<div class="input-group mb-3 ml-3">
-			  <input type="text" id ="priceInput" class="form-control" placeholder="가격" aria-label="Recipient's username" aria-describedby="basic-addon2">
+			  <input type="text" id ="priceInput" class="form-control" placeholder="가격" name="price">
 			  <div class="input-group-append">
 			    <span class="input-group-text" id="basic-addon2">원</span>
 			  </div>
@@ -55,7 +55,7 @@
 		  <div class="input-group-prepend">
 		    <span class="input-group-text" id="inputGroup-sizing-sm">이미지url</span>
 		  </div>
-		  <input type="text" id ="pictureInput" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+		  <input type="text" id ="pictureInput" class="form-control" name="picture">
 		</div>
 
 		<button id="saveButton" type="submit" class="btn btn-secondary btn-lg btn-block">저장	</button>
