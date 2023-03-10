@@ -16,9 +16,9 @@ public class Test03InputController extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
-		String sellerId =request.getParameter("sellerId");		
-		String nickname = request.getParameter("nickname");
+		String sellerId =request.getParameter("sellerId");			
 		String title = request.getParameter("title");
+		int price = Integer.parseInt(request.getParameter("price"));
 		String description = request.getParameter("description");
 		String picture = request.getParameter("picture");
 		
@@ -28,9 +28,9 @@ public class Test03InputController extends HttpServlet {
 		mysqlService.connect();
 		
 		String query = "INSERT INTO `used_goods`\r\n"
-				+ "(`sellerId`, `nickname`, `title`, `description`, `picture`, createdAt, updatedAt)\r\n"
+				+ "(`sellerId`, `title`, `price`, `description`, `picture`, createdAt, updatedAt)\r\n"
 				+ "VALUE\r\n"
-				+ "('" + sellerId +"', '" + nickname +"', '" + title + "', '" + description + "', '" + picture + "', now(), now());";
+				+ "('" + sellerId +"',  '" + title + "', '" + price + "','" + description + "', '" + picture + "', now(), now());";
 		
 		int count = mysqlService.update(query);// 업데이트 쿼리
 		

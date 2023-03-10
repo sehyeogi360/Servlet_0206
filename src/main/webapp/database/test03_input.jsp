@@ -47,7 +47,7 @@
 			
 		</div>
 	
-		<textarea rows="5" cols="160" class="mt-3">
+		<textarea rows="5" cols="160" id ="descriptionInput"class="mt-3">
 		
 		</textarea>
 		
@@ -55,7 +55,7 @@
 		  <div class="input-group-prepend">
 		    <span class="input-group-text" id="inputGroup-sizing-sm">이미지url</span>
 		  </div>
-		  <input type="text" id ="priceInput" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+		  <input type="text" id ="pictureInput" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
 		</div>
 
 		<button id="saveButton" type="submit" class="btn btn-secondary btn-lg btn-block">저장	</button>
@@ -76,6 +76,9 @@
 			let seller = $("#sellerInput").val();
 			let title = $("#titleInput").val();
 			let price = $("#priceInput").val();
+			let description = $("#descriptionInput").val();
+			let picture = $("#pictureInput").val();
+			
 			
 			//입력 상황	
 			if(seller == ""){

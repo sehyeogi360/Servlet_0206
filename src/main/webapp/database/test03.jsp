@@ -38,6 +38,7 @@
 				<img width ="350" height = "300" src="<%=resultSet.getString("picture") %>" alt="items">
 				<div><span class="text-bold"><%=resultSet.getString("title") %></span> </div>
 				<div><%= resultSet.getInt("price") %>원</div>
+				<div><%= resultSet.getString("description") %>원</div>
 				<div><%=resultSet.getInt("id") %></div>
 			</div>
 			<%} %>
