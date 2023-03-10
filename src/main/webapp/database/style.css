@@ -18,10 +18,16 @@
 .header>.main-menu{
 	height:75px;
 }
-/*
-div:hover{
+
+.box{
+	width:350px;
+	height:300px;
+}
+
+div box:hover{
+	
 	background-color:black;
-}*/
+}
 
 
 .footer{
